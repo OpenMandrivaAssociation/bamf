@@ -24,7 +24,7 @@ Bamf matches application windows to desktop files.
 
 %package daemon
 Summary:        Window matching library - daemon
-Group:          System/GUI/Other
+Group:          System/Servers
 
 %description daemon
 Bamf matches application windows to desktop files.
@@ -33,7 +33,7 @@ facilitates the matching of applications started through GDesktopAppInfo.
 
 %package -n %{libname}
 Summary:        Window matching library - shared libraries
-Group:          Development/Libraries/Other
+Group:          System/Libraries
 
 %description -n %{libname}
 Bamf matches application windows to desktop files.
@@ -42,7 +42,7 @@ This package contains shared libraries to be used by applications.
 
 %package -n %{develname}
 Summary:        Window matching library - development files
-Group:          Development/Libraries/Other
+Group:          Development/C
 Requires:       %{name}-daemon = %{version}-%{release}
 Requires:       %{libname} = %{version}-%{release}
 
