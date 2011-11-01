@@ -3,13 +3,13 @@
 %define develname	%mklibname 	%{name} -d
 
 Name:           bamf
-Version:	0.2.104
-Release:        1
-License:        LGPLv3
-Summary:        Window matching library
-Url:            http://launchpad.net/bamf
-Group:          Graphical desktop/Other
-Source:         %{name}-%{version}.tar.gz
+Version:		0.2.104
+Release:		1
+License:		LGPLv3
+Summary:		Window matching library
+Url:			http://launchpad.net/bamf
+Group:			Graphical desktop/Other
+Source0:		%{name}-%{version}.tar.gz
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(dbus-glib-1)
 BuildRequires:  pkgconfig(glib-2.0)
@@ -62,7 +62,7 @@ This package contains files that are needed to build applications.
 
 %install
 %makeinstall_std
-# Remove unwanted files
+
 find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 
 %files daemon
