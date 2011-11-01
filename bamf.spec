@@ -3,12 +3,12 @@
 %define develname	%mklibname 	%{name} -d
 
 Name:           bamf
-Version:		0.2.104
+Version:	0.2.104
 Release:        1
-License:        LGPL-3.0
+License:        LGPLv3
 Summary:        Window matching library
 Url:            http://launchpad.net/bamf
-Group:          System/GUI/Other
+Group:          Graphical desktop/Other
 Source:         %{name}-%{version}.tar.gz
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(dbus-glib-1)
