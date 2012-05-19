@@ -55,6 +55,9 @@ This package contains files that are needed to build applications.
 %setup -q
 
 %build
+
+export CFLAGS+=" -fno-strict-aliasing -Wno-error=deprecated-declarations" CXXFLAGS+=" -fno-strict-aliasing" FFLAGS+=" -fno-strict-aliasing"
+
 %configure2_5x \
   --disable-static \
   --enable-introspection=yes
