@@ -3,7 +3,7 @@
 %define develname	%mklibname 	%{name} -d
 
 Name:           bamf
-Version:		0.2.104
+Version:		0.2.116
 Release:		1
 License:		LGPLv3
 Summary:		Window matching library
