@@ -85,3 +85,18 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 %{_libdir}/pkgconfig/*.pc
 %{_datadir}/gtk-doc/html/libbamf/
 
+
+
+%changelog
+* Sat May 19 2012 Crispin Boylan <crisb@mandriva.org> 0.2.116-1
++ Revision: 799665
+- Disable strict aliasing
+- New release
+
+* Tue Nov 01 2011 Matthew Dawkins <mattydaw@mandriva.org> 0.2.104-1
++ Revision: 708190
+- spec clean up
+- fixed group
+- fixed group
+- imported package bamf
+
