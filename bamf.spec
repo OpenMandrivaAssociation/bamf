@@ -4,7 +4,7 @@
 
 Name:           bamf
 Version:		0.2.116
-Release:		1
+Release:		2
 License:		LGPLv3
 Summary:		Window matching library
 Url:			http://launchpad.net/bamf
