@@ -78,7 +78,7 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 
 %files -n %{libname}
 %doc COPYING
-%{_libdir}/*.so.%{major}*
+%{_libdir}/libbamf%{major}.so.*
 
 %files -n %{develname}
 %doc COPYING
