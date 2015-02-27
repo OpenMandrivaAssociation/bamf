@@ -1,6 +1,7 @@
-%define	major	0
+%define	major	3
 %define libname	%mklibname %{name} %{major}
 %define develname	%mklibname 	%{name} -d
+%define debug_package	%{nil}
 
 Name:           bamf
 Version:		0.2.116
@@ -44,8 +45,8 @@ This package contains shared libraries to be used by applications.
 %package -n %{develname}
 Summary:        Window matching library - development files
 Group:          Development/C
-Requires:       %{name}-daemon = %{version}-%{release}
-Requires:       %{libname} = %{version}-%{release}
+Requires:       %{name}-daemon = %{EVRD}
+Requires:       %{libname} = %{EVRD}
 
 %description -n %{develname}
 Bamf matches application windows to desktop files.
@@ -71,34 +72,20 @@ export CFLAGS+=" -fno-strict-aliasing -Wno-error=deprecated-declarations" CXXFLA
 find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 
 %files daemon
-%defattr(-,root,root)
 %doc COPYING
 %{_datadir}/dbus-1/services/*.service
 %{_libexecdir}/bamfdaemon
 
 %files -n %{libname}
-%defattr(-,root,root)
+%doc COPYING
 %{_libdir}/*.so.%{major}*
 
 %files -n %{develname}
-%defattr(-,root,root)
+%doc COPYING
 %{_includedir}/libbamf3/
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
 %{_datadir}/gtk-doc/html/libbamf/
 
 
-
-%changelog
-* Sat May 19 2012 Crispin Boylan <crisb@mandriva.org> 0.2.116-1
-+ Revision: 799665
-- Disable strict aliasing
-- New release
-
-* Tue Nov 01 2011 Matthew Dawkins <mattydaw@mandriva.org> 0.2.104-1
-+ Revision: 708190
-- spec clean up
-- fixed group
-- fixed group
-- imported package bamf
 
