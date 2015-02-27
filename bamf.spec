@@ -18,6 +18,7 @@ BuildRequires:  pkgconfig(gtk+-3.0)
 BuildRequires:  pkgconfig(libgtop-2.0)
 BuildRequires:  pkgconfig(libwnck-3.0)
 BuildRequires:  vala-devel
+BuildRequires:	gcc-c++, gcc, gcc-cpp
 
 %description
 Bamf matches application windows to desktop files.
@@ -55,7 +56,8 @@ This package contains files that are needed to build applications.
 %setup -q
 
 %build
-
+export CC=gcc
+export CXX=g++
 export CFLAGS+=" -fno-strict-aliasing -Wno-error=deprecated-declarations" CXXFLAGS+=" -fno-strict-aliasing" FFLAGS+=" -fno-strict-aliasing"
 
 %configure2_5x \
