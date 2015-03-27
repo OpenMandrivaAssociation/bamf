@@ -1,4 +1,0 @@
-addFilter("W: only-non-binary-in-usr-lib")
-addFilter("W: not-standard-release-extension")
-addFilter("W: non-standard-dir-in-usr libexec")
-addFilter("E: no-dependency-on")
