@@ -22,7 +22,6 @@ BuildRequires:  pkgconfig(libgtop-2.0)
 BuildRequires:  pkgconfig(libwnck-3.0)
 BuildRequires:  vala-devel
 BuildRequires:	gcc-c++, gcc, gcc-cpp
-BuildRequires:  libxslt1
 BuildRequires:  python-libxml2
 BuildRequires:  pkgconfig(gtk-doc)
 
