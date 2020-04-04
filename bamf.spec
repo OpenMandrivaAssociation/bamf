@@ -4,13 +4,14 @@
 %define debug_package	%{nil}
 
 Name:           bamf
-Version:		0.2.116
-Release:		2
+Version:		0.5.4
+Release:		1
 License:		LGPLv3
 Summary:		Window matching library
 Url:			http://launchpad.net/bamf
 Group:			Graphical desktop/Other
-Source0:		%{name}-%{version}.tar.gz
+Source0:		https://launchpad.net/bamf/0.5/%{version}/+download/%{name}-%{version}.tar.gz
+
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(dbus-glib-1)
 BuildRequires:  pkgconfig(glib-2.0)
