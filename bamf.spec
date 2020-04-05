@@ -1,11 +1,12 @@
 %define	major	3
 %define libname	%mklibname %{name} %{major}
 %define develname	%mklibname 	%{name} -d
+%define girname		%mklibname %{name}-gir %{major}
 %define debug_package	%{nil}
 
 Name:           bamf
 Version:		0.5.4
-Release:		1
+Release:		2
 License:		LGPLv3
 Summary:		Window matching library
 Url:			http://launchpad.net/bamf
@@ -63,6 +64,7 @@ This package contains files that are needed to build applications.
 Summary:        GObject Introspection interface description for %{name}
 Group:          System/Libraries
 Requires:       %{libname} = %{version}-%{release}
+Obsoletes:      %{girname} <= 0.5.4-1
 
 %description -n %{girname}
 GObject Introspection interface description for %{name}.
