@@ -11,6 +11,7 @@ Summary:		Window matching library
 Url:			http://launchpad.net/bamf
 Group:			Graphical desktop/Other
 Source0:		https://launchpad.net/bamf/0.5/%{version}/+download/%{name}-%{version}.tar.gz
+Patch0:     bamf-no-gtester2xunit.patch
 
 BuildRequires:  gnome-common
 BuildRequires:  pkgconfig(dbus-1)
@@ -24,6 +25,7 @@ BuildRequires:  vala-devel
 BuildRequires:	gcc-c++, gcc, gcc-cpp
 BuildRequires:  python-libxml2
 BuildRequires:  pkgconfig(gtk-doc)
+BuildRequires:	pkgconfig(systemd)
 
 %description
 Bamf matches application windows to desktop files.
@@ -59,19 +61,20 @@ This package contains files that are needed to build applications.
 
 %prep
 %setup -q
+%autopatch -p1
 
 %build
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 export CFLAGS+=" -fno-strict-aliasing -Wno-error=deprecated-declarations" CXXFLAGS+=" -fno-strict-aliasing" FFLAGS+=" -fno-strict-aliasing"
 
-%configure2_5x \
+%configure \
   --disable-static \
   --enable-introspection=yes
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 
