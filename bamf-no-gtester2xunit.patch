@@ -1,0 +1,25 @@
+diff --git a/configure.ac b/configure.ac
+index 41cb7db..819379f 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -113,13 +113,13 @@ GTK_DOC_CHECK(1.0)
+ # gtester2xunit checks    #
+ ###########################
+ 
+-AC_PATH_PROG([PYTHON],[python])
+-AC_MSG_CHECKING(for gtester2xunit dependencies)
+-if !($PYTHON -c "import libxslt, libxml2" 2> /dev/null); then
+-  AC_MSG_RESULT([no])
+-  AC_MSG_ERROR([You need to install python-libxslt1 and python-libxml2]);
+-fi
+-AC_MSG_RESULT([yes])
++dnl AC_PATH_PROG([PYTHON],[python])
++dnl AC_MSG_CHECKING(for gtester2xunit dependencies)
++dnl if !($PYTHON -c "import libxslt, libxml2" 2> /dev/null); then
++dnl   AC_MSG_RESULT([no])
++dnl   AC_MSG_ERROR([You need to install python-libxslt1 and python-libxml2]);
++dnl fi
++dnl AC_MSG_RESULT([yes])
+ 
+ ###########################
+ # Headless tests
