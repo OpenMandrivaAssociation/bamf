@@ -63,10 +63,13 @@ This package contains files that are needed to build applications.
 %setup -q
 %autopatch -p1
 
+# fix build with glib >= 2.62
+sed -i -e '/CFLAGS/s,-Werror\s\?,,g' configure.ac
+
 %build
 #export CC=gcc
 #export CXX=g++
-export CFLAGS+=" -fno-strict-aliasing -Wno-error=deprecated-declarations" CXXFLAGS+=" -fno-strict-aliasing" FFLAGS+=" -fno-strict-aliasing"
+export CFLAGS="%{optflags} -Wno-deprecated-declarations"
 
 %configure \
   --disable-static \
