@@ -59,6 +59,14 @@ Bamf matches application windows to desktop files.
 
 This package contains files that are needed to build applications.
 
+%package -n %{girname}
+Summary:        GObject Introspection interface description for %{name}
+Group:          System/Libraries
+Requires:       %{libname} = %{version}-%{release}
+
+%description -n %{girname}
+GObject Introspection interface description for %{name}.
+
 %prep
 %setup -q
 %autopatch -p1
@@ -85,6 +93,10 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 %doc COPYING
 %{_datadir}/dbus-1/services/*.service
 #{_libexecdir}/bamfdaemon
+%{_userunitdir}/bamfdaemon.service
+%{_libexecdir}/bamf/bamfdaemon
+%{_libexecdir}/bamf/bamfdaemon-dbus-runner
+%{_datadir}/upstart/sessions/bamfdaemon.conf
 
 %files -n %{libname}
 %doc COPYING
@@ -96,3 +108,8 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
 %{_datadir}/gtk-doc/html/libbamf/
+%{_datadir}/gir-1.0/Bamf-%{major}.gir
+%{_datadir}/vala/vapi/libbamf3.vapi
+
+%files -n %{girname}
+%{_libdir}/girepository-1.0/Bamf-%{major}.typelib
