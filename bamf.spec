@@ -80,7 +80,7 @@ sed -i -e '/CFLAGS/s,-Werror\s\?,,g' configure.ac
 #export CC=gcc
 #export CXX=g++
 export CFLAGS="%{optflags} -Wno-deprecated-declarations"
-
+autoreconf --install
 %configure \
   --disable-static \
   --enable-introspection=yes
