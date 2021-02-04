@@ -27,6 +27,7 @@ BuildRequires:	gcc-c++, gcc, gcc-cpp
 BuildRequires:  python-libxml2
 BuildRequires:  pkgconfig(gtk-doc)
 BuildRequires:	pkgconfig(systemd)
+BuildRequires:  python3dist(python-lxml)
 
 %description
 Bamf matches application windows to desktop files.
