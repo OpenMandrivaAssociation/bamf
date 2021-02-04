@@ -5,14 +5,14 @@
 %define debug_package	%{nil}
 
 Name:           bamf
-Version:		0.5.4
-Release:		3
+Version:		0.5.5
+Release:		1
 License:		LGPLv3
 Summary:		Window matching library
 Url:			http://launchpad.net/bamf
 Group:			Graphical desktop/Other
-Source0:		https://launchpad.net/bamf/0.5/%{version}/+download/%{name}-%{version}.tar.gz
-Patch0:     bamf-no-gtester2xunit.patch
+Source0:		https://launchpad.net/bamf/0.5/%{version}/+download/%{name}-%{version}.tar.xz
+#Patch0:     bamf-no-gtester2xunit.patch
 
 BuildRequires:  gnome-common
 BuildRequires:  pkgconfig(dbus-1)
@@ -27,6 +27,7 @@ BuildRequires:	gcc-c++, gcc, gcc-cpp
 BuildRequires:  python-libxml2
 BuildRequires:  pkgconfig(gtk-doc)
 BuildRequires:	pkgconfig(systemd)
+BuildRequires:  python3dist(lxml)
 
 %description
 Bamf matches application windows to desktop files.
@@ -80,7 +81,7 @@ sed -i -e '/CFLAGS/s,-Werror\s\?,,g' configure.ac
 #export CC=gcc
 #export CXX=g++
 export CFLAGS="%{optflags} -Wno-deprecated-declarations"
-
+autoreconf --install
 %configure \
   --disable-static \
   --enable-introspection=yes
@@ -109,7 +110,7 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 %{_includedir}/libbamf3/
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
-%{_datadir}/gtk-doc/html/libbamf/
+#{_datadir}/gtk-doc/html/libbamf/
 %{_datadir}/gir-1.0/Bamf-%{major}.gir
 %{_datadir}/vala/vapi/libbamf3.vapi
 
