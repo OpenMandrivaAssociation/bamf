@@ -110,7 +110,7 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 %{_includedir}/libbamf3/
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
-%{_datadir}/gtk-doc/html/libbamf/
+#{_datadir}/gtk-doc/html/libbamf/
 %{_datadir}/gir-1.0/Bamf-%{major}.gir
 %{_datadir}/vala/vapi/libbamf3.vapi
 
