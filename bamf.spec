@@ -4,7 +4,6 @@
 %define libname	%mklibname %{name} %{major}
 %define develname	%mklibname 	%{name} -d
 %define girname		%mklibname %{name}-gir %{major}
-%define debug_package	%{nil}
 
 Name:           bamf
 Version:		0.5.5
