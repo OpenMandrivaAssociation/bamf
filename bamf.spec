@@ -1,3 +1,5 @@
+%define _empty_manifest_terminate_build 0
+
 %define	major	3
 %define libname	%mklibname %{name} %{major}
 %define develname	%mklibname 	%{name} -d
@@ -6,7 +8,7 @@
 
 Name:           bamf
 Version:		0.5.5
-Release:		1
+Release:		2
 License:		LGPLv3
 Summary:		Window matching library
 Url:			http://launchpad.net/bamf
