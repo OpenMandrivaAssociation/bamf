@@ -6,8 +6,8 @@
 %define girname		%mklibname %{name}-gir %{major}
 
 Name:           bamf
-Version:		0.5.5
-Release:		3
+Version:		0.5.6
+Release:		1
 License:		LGPLv3
 Summary:		Window matching library
 Url:			http://launchpad.net/bamf
