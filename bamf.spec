@@ -95,6 +95,7 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 
 %files daemon
 %doc COPYING
+%doc %{_datadir}/gtk-doc/html/libbamf/  
 %{_datadir}/dbus-1/services/*.service
 #{_libexecdir}/bamfdaemon
 %{_userunitdir}/bamfdaemon.service
