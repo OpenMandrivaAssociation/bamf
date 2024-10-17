@@ -10,7 +10,7 @@ Version:		0.5.6
 Release:		1
 License:		LGPLv3
 Summary:		Window matching library
-Url:			http://launchpad.net/bamf
+Url:			https://launchpad.net/bamf
 Group:			Graphical desktop/Other
 Source0:		https://launchpad.net/bamf/0.5/%{version}/+download/%{name}-%{version}.tar.xz
 #Patch0:     bamf-no-gtester2xunit.patch
