@@ -15,6 +15,11 @@ Group:			Graphical desktop/Other
 Source0:		https://launchpad.net/bamf/0.5/%{version}/+download/%{name}-%{version}.tar.xz
 #Patch0:     bamf-no-gtester2xunit.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  gnome-common
 BuildRequires:  pkgconfig(dbus-1)
 BuildRequires:  pkgconfig(dbus-glib-1)
